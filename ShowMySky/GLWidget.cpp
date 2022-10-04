@@ -156,7 +156,11 @@ void GLWidget::initializeGL()
     {
         if(!ShowMySky_AtmosphereRenderer_create)
         {
-            QLibrary showMySky("ShowMySky");
+#if QT_VERSION < QT_VERSION_CHECK(6,0,0)
+            QLibrary showMySky("ShowMySky-Qt5");
+#else
+            QLibrary showMySky("ShowMySky-Qt6");
+#endif
             if(!showMySky.load())
                 throw DataLoadError(tr("Failed to load ShowMySky library"));
             const auto abi=reinterpret_cast<const quint32*>(showMySky.resolve("ShowMySky_ABI_version"));
