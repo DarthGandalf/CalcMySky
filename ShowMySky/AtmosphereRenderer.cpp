@@ -17,7 +17,7 @@
 #include "../common/const.hpp"
 #include "../common/util.hpp"
 #include "../common/EclipsedDoubleScatteringPrecomputer.hpp"
-#include "api/Settings.hpp"
+#include "ShowMySky/Settings.hpp"
 
 namespace fs=std::filesystem;
 

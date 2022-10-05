@@ -9,7 +9,7 @@
 #include "Manipulator.hpp"
 #include "RadiancePlot.hpp"
 #include "GLWidget.hpp"
-#include "api/Settings.hpp"
+#include "ShowMySky/Settings.hpp"
 
 class QCheckBox;
 
